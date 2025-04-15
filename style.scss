@@ -4,5 +4,180 @@
     box-sizing: border-box;
 }
 body{
-    background-color: rgb(91, 91, 235);
+    background-color: rgb(3, 3, 17);
+    display: flex;
+    justify-content: center;
+   
+}
+
+.background_img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 280px;
+    z-index: -1;
+    
+    img{
+        height: 100%;  
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      
+    }
+    
+    
+
+}
+.container{
+   
+    width: 100%;
+    max-width: 700px;
+    height: 50px;
+    margin-top: 100px;
+    
+    .header{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .title{
+            color: #0b0420;
+            font-size: 30px;
+            text-transform: uppercase;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+       .theme{
+        cursor: pointer;
+        color: #fff;
+       }
+
+    }
+
+    .create_task{
+        background-color: #140c2c;
+        height: 50px;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 30px;
+        align-items: center;
+        border-radius: 6px;
+        .check{
+            
+            border: 1.5px solid rgb(240, 226, 226);
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            
+            transition: all .2s;
+            &:hover{
+                background: linear-gradient(135deg,#55ddff 0%,#44dd 100%)
+            }
+
+        }
+        form{
+            width: 400px;
+           
+            input{
+                padding: 10px 10px;
+                width: 100%;
+                outline: none;
+                border: none;
+                background-color: transparent;
+                color: #c2cff5;;
+                text-transform: uppercase;
+                &::placeholder{
+                        color: #c2cff5;
+                        font-size: 14px;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                }
+            }
+        }
+        button{
+            padding: 8px 10px;
+            border: none;
+            outline: none;
+            color: #0b0420;
+            text-transform: uppercase;
+            background-color: #0b0420;
+            color: #c2cff5;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all .2s;
+            &:hover{
+                background-color: #1e2a5e;
+            }
+           
+
+        }
+        
+    }
+
+    .task_wrapper{
+        background-color: #0b0420;
+        margin-top: 20px;
+        
+        .todo_kotet{
+            display: flex;
+            justify-content: space-around;
+            border-bottom: 1px solid #243261;
+            align-items: center;
+            height: 50px;
+
+            .check{
+                border: 1.5px solid rgb(240, 226, 226);
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+                
+                transition: all .2s;
+                &:hover{
+                    background: linear-gradient(135deg,#55ddff 0%,#44dd 100%)
+                }
+    
+            }
+            .todo_item{
+                color: #a39ef1;
+                font-size: 16px;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                text-transform: uppercase;
+                width: 70%;
+                margin-inline: 20px;
+                
+            }
+            .delete_item{
+                button{
+                    padding: 5px 10px;
+                    font-weight: bold;
+                    border: none;
+                    cursor: pointer;
+                    outline:none;
+                    text-transform: uppercase;
+                    color:rgb(5, 5, 44);
+                    transition: all .1s;
+                    &:active{
+                        background-color: #661a1a;
+                    }
+                }
+            }
+        }
+        .todo_info{
+            display: flex;
+            justify-content: space-around;
+            height: 25px;
+            align-items: center;
+            color: #c2cff5;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+        
+        }
+       
+    }
+  
 }

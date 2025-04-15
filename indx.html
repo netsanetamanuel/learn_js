@@ -10,11 +10,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo list </title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+   
 </head>
 
 <body>
- ssl
-   
+     <div class="background_img">
+        <img src="/img/cali.jpg" alt="header_img">
+     </div>
+
+     <div class="container">
+
+        <div class="header">
+            <div class="title">todo</div>
+
+             <!-- <div class="theme">
+                <i class="fa-solid fa-xmark"></i>
+             </div> -->
+        </div>
+
+        <div class="create_task">
+            <div class="check"></div>
+            
+                <form onsubmit="add_item(event)">
+                    <input id="add_items" type="text" placeholder="Create new task ...">
+                </form>
+            
+            
+            <!-- <div>
+                <button>Delete</button>
+            </div> -->
+        </div>
+
+         <div class="task_wrapper">
+           
+           
+            
+
+            <!-- <div class="todo_info">
+                <div>
+                    <span>5 items left</span>
+                </div>
+                 <div class="todo_status">
+                    <span>Active</span>
+                    <span>Completed</span>
+                 </div>
+                 <div><span>clear Completed</span></div>
+                 
+            </div> -->
+
+         </div>
+
+     </div>
+     
     <!-- <script>
         const numbers = document.getElementById('numbers');
         let selectnode = null;
@@ -55,7 +103,7 @@
             }
         }
     </script> -->
-
+<script src="script.js"></script>
 </body>
 
 </html>
