@@ -70,6 +70,7 @@ body{
             width: 30px;
             height: 30px;
             cursor: pointer;
+            margin-inline: 10px;
             
             transition: all .2s;
             &:hover{
@@ -78,14 +79,15 @@ body{
 
         }
         form{
-            width: 400px;
+            width: 100%;
            
             input{
                 padding: 10px 10px;
-                width: 100%;
+                width: 80%;
+                margin-inline: 10px;
                 outline: none;
                 border: none;
-                background-color: transparent;
+                 background-color: transparent;
                 color: #c2cff5;;
                 text-transform: uppercase;
                 &::placeholder{
@@ -135,9 +137,9 @@ body{
                 cursor: pointer;
                 
                 transition: all .2s;
-                &:hover{
-                    background: linear-gradient(135deg,#55ddff 0%,#44dd 100%)
-                }
+                // &:hover{
+                //     background: linear-gradient(135deg,#55ddff 0%,#44dd 100%)
+                // }
     
             }
             .todo_item{
@@ -175,6 +177,18 @@ body{
             text-transform: uppercase;
             font-size: 14px;
             letter-spacing: 1px;
+         
+         span{
+            cursor: pointer;
+            margin-inline: 5px;
+            .active{
+                color: black;
+            }
+         }
+
+         .todo_status span:first-child{
+            color: blue;
+         }
         
         }
        

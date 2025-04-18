@@ -1,19 +1,11 @@
-//  <div class="todo_kotet">
-/* <div class="check">
-</div>
-<div class="todo_item">
-    cut the lawn
-</div>
-<div class="delete_item">
-    <button>Delete</button>
-</div>
-</div>  */
+
 
 
 function add_item(event){
     event.preventDefault();
     // get input value 
     let text = document.getElementById("add_items").value;
+    
 
     // check if input is empty
     if(text.trim()==="") return;
@@ -42,17 +34,42 @@ function add_item(event){
     todo_kotet.appendChild(todo_item);
     todo_kotet.appendChild(delete_item);
 
-    let wrapper = document.querySelector('.task_wrapper');
+    let wrapper = document.querySelector('.task_wrapper .todolist_wrapper');
 
 
     wrapper.appendChild(todo_kotet);
-    document.getElementById('add_items').value = " ";
+    document.getElementById('add_items').value = "";
 
     del_btn.addEventListener('click',() =>{
         todo_kotet.remove();
+    });
+
+    check.addEventListener('click',() =>{
+        
+
+        if(todo_item.style.textDecoration === 'line-through'){
+            todo_item.style.textDecoration = 'none';
+            check.style.background='';
+            
+        }else{
+            check.style.background = ' linear-gradient(135deg,#55ddff 0%,#44dd 100%)';
+            todo_item.style.textDecoration ='line-through';
+
+            
+        }
+        
     })
 
+   
+
+
 }
+
+
+
+// strike through 
+
+
 
 // delete items 
 
