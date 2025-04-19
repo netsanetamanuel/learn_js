@@ -1,0 +1,103 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: radial-gradient(circle, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 10px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  gap: 20px;
+}
+
+.header {
+  border: 1px solid #bcd9fa;
+  border-radius: 15px;
+  width: 50%;
+  height: 130px;
+  display: flex;
+  justify-content: space-between;
+  padding: 13px;
+  position: relative;
+}
+.header .score {
+  width: 120px;
+  background-color: rgb(210, 227, 248);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  letter-spacing: 2px;
+}
+.header .score_label {
+  color: hsl(229, 64%, 46%);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.header .score_value {
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.gameplay {
+  width: 50%;
+  height: 28rem;
+  position: relative;
+}
+.gameplay .triangle {
+  position: absolute;
+  top: 94px;
+  left: 185px;
+}
+.gameplay #rock, .gameplay #paper, .gameplay #scisor {
+  background-color: #e1eaf5;
+  padding: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.gameplay #rock:hover, .gameplay #paper:hover, .gameplay #scisor:hover {
+  transform: scale(1.2);
+}
+.gameplay #rock:active, .gameplay #paper:active, .gameplay #scisor:active {
+  transform: scale(1);
+}
+.gameplay #rock {
+  position: absolute;
+  top: 60px;
+  right: 155px;
+  border: 15px solid red;
+}
+.gameplay #paper {
+  position: absolute;
+  top: 60px;
+  left: 170px;
+  border: 15px solid blue;
+}
+.gameplay #scisor {
+  position: absolute;
+  bottom: 45px;
+  right: 265px;
+  border: 15px solid rgb(238, 238, 88);
+}
+
+.rules {
+  position: absolute;
+  bottom: -20px;
+  right: 100px;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 1px solid #bcd9fa;
+  font-weight: bold;
+  color: #d2e4f8;
+  border-radius: 10px;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */
