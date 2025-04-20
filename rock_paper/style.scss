@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
 }
 
 body{
@@ -53,13 +54,13 @@ body{
         }
         
     }
-    .gameplay{
+    .gamechoice{
         
         width: 50%;
         height: 28rem;
         position: relative;
 
-        .triangle{
+        #triangle{
             position: absolute;
             top: 94px;
             left: 185px;
@@ -97,10 +98,25 @@ body{
             border: 15px solid rgb(238, 238, 88);
         }
         
+        .player_pos{
+            position: absolute;
+            top: 60px;
+            left: 170px;
+            display: block !important;
+            
+        }
+        .comp_pos{
+            position: absolute;
+            top: 60px;
+            right: 155px;
+            display: block !important;
+        }
         
     }
-    .rules{
-        
+   
+    
+  
+    #rule_btn{
         position: absolute;
         bottom: -20px ;
         right: 100px;
@@ -112,6 +128,83 @@ body{
         color: #d2e4f8;
         border-radius: 10px;
         cursor: pointer;
-         
+        background: transparent;
+        
 
     }
+
+    .rules{
+        display: none;
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(26, 24, 24, 0.808);
+        
+        &_popup{
+           
+            border: 1px solid #fff;
+            padding: 10px;
+            width: 75%;
+            height: 450px;
+            border-radius: 15px;
+            background-color: #bcd9fa;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            display: flex;
+            justify-content: center;
+            position: relative;
+
+            #close{
+              position: absolute;
+              top: 5px;
+              left: 5px; 
+              background-color: #150e74;
+              width: 30px;
+              height: 30px; 
+              border-radius: 30px;
+              cursor: pointer;
+              
+            }
+            
+            .play_rule{
+                position: absolute;
+                top: 70px;
+                left: 50px;
+                border-radius: 10px;
+                border: 2px solid #150e74;
+                padding: 40px 30px;
+                width: 40%;
+                height: 70%;
+                h2{
+                    text-align: center;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    line-height: 60px;
+                    color: rgb(24, 13, 124);
+                }
+
+            }
+            .score{
+                border: 2px solid blue;
+                height: 70%;
+                width: 40%;
+                position: absolute;
+                border-radius: 10px;
+                line-height: 50px;
+                text-transform: uppercase;
+                color:rgb(24, 13, 124); ;
+                top: 70px;
+                right: 50px;
+                padding: 40px 30px;
+            }
+            
+        }
+    }
+.rules.show{
+    display: block;
+}
+

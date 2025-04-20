@@ -46,49 +46,61 @@ body {
   font-size: 50px;
 }
 
-.gameplay {
+.gamechoice {
   width: 50%;
   height: 28rem;
   position: relative;
 }
-.gameplay .triangle {
+.gamechoice #triangle {
   position: absolute;
   top: 94px;
   left: 185px;
 }
-.gameplay #rock, .gameplay #paper, .gameplay #scisor {
+.gamechoice #rock, .gamechoice #paper, .gamechoice #scisor {
   background-color: #e1eaf5;
   padding: 20px;
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.2s;
 }
-.gameplay #rock:hover, .gameplay #paper:hover, .gameplay #scisor:hover {
+.gamechoice #rock:hover, .gamechoice #paper:hover, .gamechoice #scisor:hover {
   transform: scale(1.2);
 }
-.gameplay #rock:active, .gameplay #paper:active, .gameplay #scisor:active {
+.gamechoice #rock:active, .gamechoice #paper:active, .gamechoice #scisor:active {
   transform: scale(1);
 }
-.gameplay #rock {
+.gamechoice #rock {
   position: absolute;
   top: 60px;
   right: 155px;
   border: 15px solid red;
 }
-.gameplay #paper {
+.gamechoice #paper {
   position: absolute;
   top: 60px;
   left: 170px;
   border: 15px solid blue;
 }
-.gameplay #scisor {
+.gamechoice #scisor {
   position: absolute;
   bottom: 45px;
   right: 265px;
   border: 15px solid rgb(238, 238, 88);
 }
+.gamechoice .player_pos {
+  position: absolute;
+  top: 60px;
+  left: 170px;
+  display: block !important;
+}
+.gamechoice .comp_pos {
+  position: absolute;
+  top: 60px;
+  right: 155px;
+  display: block !important;
+}
 
-.rules {
+#rule_btn {
   position: absolute;
   bottom: -20px;
   right: 100px;
@@ -100,4 +112,74 @@ body {
   color: #d2e4f8;
   border-radius: 10px;
   cursor: pointer;
+  background: transparent;
+}
+
+.rules {
+  display: none;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(26, 24, 24, 0.808);
+}
+.rules_popup {
+  border: 1px solid #fff;
+  padding: 10px;
+  width: 75%;
+  height: 450px;
+  border-radius: 15px;
+  background-color: #bcd9fa;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.rules_popup #close {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: #150e74;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.rules_popup .play_rule {
+  position: absolute;
+  top: 70px;
+  left: 50px;
+  border-radius: 10px;
+  border: 2px solid #150e74;
+  padding: 40px 30px;
+  width: 40%;
+  height: 70%;
+}
+.rules_popup .play_rule h2 {
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 60px;
+  color: rgb(24, 13, 124);
+}
+.rules_popup .score {
+  border: 2px solid blue;
+  height: 70%;
+  width: 40%;
+  position: absolute;
+  border-radius: 10px;
+  line-height: 50px;
+  text-transform: uppercase;
+  color: rgb(24, 13, 124);
+  top: 70px;
+  right: 50px;
+  padding: 40px 30px;
+}
+
+.rules.show {
+  display: block;
 }/*# sourceMappingURL=style.css.map */

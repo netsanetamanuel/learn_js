@@ -17,22 +17,38 @@
             </div>
             <div class="score">
                 <span class="score_label">Score</span>
-                <span class="score_value">12</span>
+               <span class="score_value">12</span>
             </div>
          </div>
 
-        <div class="gameplay">
-            <img class="triangle" src="/rock_paper/images/bg-triangle.svg" alt="">
-
-            <img id="paper"  src="/rock_paper/images/icon-paper.svg" alt="">
-            <img id="rock" src="/rock_paper/images/icon-rock.svg" alt="">
-            <img id="scisor" src="/rock_paper/images/icon-scissors.svg" alt="">
+        <div class="gamechoice">
+            <img id="triangle" src="/rock_paper/images/bg-triangle.svg" alt="">
+            <div class="game_array">
+                <img id="paper"  src="/rock_paper/images/icon-paper.svg" alt="">
+                <img id="rock" src="/rock_paper/images/icon-rock.svg" alt="">
+                <img id="scisor" src="/rock_paper/images/icon-scissors.svg" alt="">
+            </div>
+            
         </div>
+        
 
-        <div class="rules">
-        rules
+        <button  id="rule_btn">rule</button>
+
+        <div  class="rules">
+            <div class="rules_popup">
+                <img onclick="close" id="close" src="/rock_paper/images/close.svg" alt="">
+                <h1>Rules</h1>
+                <div class="play_rule">
+                    <h2>paper beat rock</h2>
+                    <h2>paper beat rock</h2>
+                    <h2>paper beat rock</h2>
+                </div>
+                <div class="score">
+                    <h3>If the player wins, they gain 1 point. If the computer wins, 
+                        the player loses one point.</h3>
+                </div>
+            </div>
         </div>
-
     
 
 
